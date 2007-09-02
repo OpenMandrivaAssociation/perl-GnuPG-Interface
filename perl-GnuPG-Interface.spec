@@ -1,6 +1,6 @@
 %define module	GnuPG-Interface
 %define name	perl-%{module}
-%define version 0.35
+%define version 0.36
 %define release %mkrel 1
 
 Name:		%{name}
@@ -9,12 +9,9 @@ Release:	%{release}
 Summary:	GnuPG-Interface module for perl
 Group:		Development/Perl
 License:	GPL
-Source:		http://search.cpan.org/CPAN/authors/id/F/FT/FTOBIN/%{module}-%{version}.tar.bz2
 Url:		http://search.cpan.org/dist/%{module}
-%if %{mdkversion} < 1010
-Buildrequires:	perl-devel
-%endif
-BuildRequires:	perl-Class-MethodMaker
+Source:     http://www.cpan.org/modules/by-module/GnuPG/%{module}-%{version}.tar.gz
+BuildRequires:	perl(Class::MethodMaker)
 BuildRequires:  gnupg
 BuildArch:	noarch
 BuildRoot:	%{_tmppath}/%{name}-%{version}
