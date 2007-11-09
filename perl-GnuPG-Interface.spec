@@ -1,7 +1,7 @@
 %define module	GnuPG-Interface
 %define name	perl-%{module}
 %define version 0.36
-%define release %mkrel 1
+%define release %mkrel 2
 
 Name:		%{name}
 Version:	%{version}
@@ -11,10 +11,11 @@ Group:		Development/Perl
 License:	GPL
 Url:		http://search.cpan.org/dist/%{module}
 Source:     http://www.cpan.org/modules/by-module/GnuPG/%{module}-%{version}.tar.gz
+Requires:	    perl(Class::MethodMaker)
 BuildRequires:	perl(Class::MethodMaker)
 BuildRequires:  gnupg
-BuildArch:	noarch
-BuildRoot:	%{_tmppath}/%{name}-%{version}
+BuildArch:	    noarch
+BuildRoot:	    %{_tmppath}/%{name}-%{version}
 
 %description
 GnuPG::Interface and its associated modules
