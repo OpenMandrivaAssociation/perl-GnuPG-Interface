@@ -15,6 +15,7 @@ Requires:	    perl(Class::MethodMaker)
 BuildRequires:	perl(Class::MethodMaker)
 BuildRequires:  gnupg
 BuildArch:	    noarch
+BuildRoot:	    %{_tmppath}/%{name}-%{version}
 
 %description
 GnuPG::Interface and its associated modules
