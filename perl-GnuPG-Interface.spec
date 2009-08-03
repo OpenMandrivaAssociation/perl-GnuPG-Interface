@@ -1,21 +1,21 @@
-%define module	GnuPG-Interface
-%define name	perl-%{module}
-%define version 0.36
-%define release %mkrel 4
+%define upstream_name	 GnuPG-Interface
+%define upstream_version 0.36
 
-Name:		%{name}
-Version:	%{version}
-Release:	%{release}
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
+
 Summary:	GnuPG-Interface module for perl
 Group:		Development/Perl
 License:	GPL
-Url:		http://search.cpan.org/dist/%{module}
-Source:     http://www.cpan.org/modules/by-module/GnuPG/%{module}-%{version}.tar.gz
-Requires:	    perl(Class::MethodMaker)
+Url:		http://search.cpan.org/dist/%{upstream_name}
+Source0:    http://www.cpan.org/modules/by-module/GnuPG/%{upstream_name}-%{upstream_version}.tar.gz
+
 BuildRequires:	perl(Class::MethodMaker)
 BuildRequires:  gnupg
 BuildArch:	    noarch
-BuildRoot:	    %{_tmppath}/%{name}-%{version}
+BuildRoot:	    %{_tmppath}/%{name}-%{version}-%{release}
+Requires:	    perl(Class::MethodMaker)
 
 %description
 GnuPG::Interface and its associated modules
@@ -26,7 +26,7 @@ to encrypting, signing, decryption, verification,
 and key-listing parsing.
 
 %prep
-%setup -q -n %{module}-%{version}
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -48,4 +48,3 @@ rm -rf %{buildroot}
 %{perl_vendorlib}/GnuPG
 %{perl_vendorlib}/auto/GnuPG
 %{_mandir}/*/*
-
