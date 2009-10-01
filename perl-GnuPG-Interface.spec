@@ -11,10 +11,13 @@ License:	GPL
 Url:		http://search.cpan.org/dist/%{upstream_name}
 Source0:    http://www.cpan.org/modules/by-module/GnuPG/%{upstream_name}-%{upstream_version}.tar.gz
 
-BuildRequires:	perl(Class::MethodMaker)
 BuildRequires:  gnupg
+BuildRequires:	perl(Any::Moose)
+BuildRequires:	perl(Class::MethodMaker)
+
 BuildArch:	    noarch
 BuildRoot:	    %{_tmppath}/%{name}-%{version}-%{release}
+
 Requires:	    perl(Class::MethodMaker)
 
 %description
