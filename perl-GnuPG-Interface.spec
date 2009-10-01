@@ -14,6 +14,8 @@ Source0:    http://www.cpan.org/modules/by-module/GnuPG/%{upstream_name}-%{upstr
 BuildRequires:  gnupg
 BuildRequires:	perl(Any::Moose)
 BuildRequires:	perl(Class::MethodMaker)
+# For interactive tests
+BuildRequires:	perl(Expect)
 
 BuildArch:	    noarch
 BuildRoot:	    %{_tmppath}/%{name}-%{version}-%{release}
@@ -36,7 +38,10 @@ and key-listing parsing.
 make
 
 %check
-make test
+
+perl -mExpect -e 'my $e=Expect->spawn("make test");
+$e->expect(0);
+exit $e->exitstatus()'
 
 %install
 rm -rf %{buildroot}
