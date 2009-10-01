@@ -3,7 +3,7 @@
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:    %mkrel 1
+Release:    %mkrel 2
 
 Summary:	GnuPG-Interface module for perl
 Group:		Development/Perl
@@ -40,7 +40,7 @@ make
 %check
 
 perl -mExpect -e 'my $e=Expect->spawn("make test");
-$e->expect(0);
+$e->expect(undef);
 exit $e->exitstatus()'
 
 %install
