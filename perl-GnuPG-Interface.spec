@@ -1,5 +1,5 @@
 %define upstream_name	 GnuPG-Interface
-%define upstream_version 0.36
+%define upstream_version 0.42
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
@@ -46,5 +46,4 @@ rm -rf %{buildroot}
 %defattr(-,root,root)
 %doc README
 %{perl_vendorlib}/GnuPG
-%{perl_vendorlib}/auto/GnuPG
 %{_mandir}/*/*
