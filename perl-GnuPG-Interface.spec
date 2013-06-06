@@ -1,15 +1,14 @@
 %define upstream_name	 GnuPG-Interface
-%define upstream_version 0.44
-
+%define upstream_version 0.46
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	2
+Version:	%perl_convert_version 0.46
+Release:	1
 
 Summary:	GnuPG-Interface module for perl
 Group:		Development/Perl
 License:	GPL
 Url:		http://search.cpan.org/dist/%{upstream_name}
-Source0:	http://www.cpan.org/modules/by-module/GnuPG/%{upstream_name}-%{upstream_version}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/GnuPG/GnuPG-Interface-0.46.tar.gz
 
 BuildRequires:	gnupg
 BuildRequires:	perl-devel
@@ -134,4 +133,5 @@ exit $e->exitstatus()'
 
 * Fri Mar 08 2002 Arnaud de Lorbeau <adelorbeau@mandrakesoft.com> 0.31-2mdk
 - First MandrakeSoft Package.
+
 
