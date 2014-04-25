@@ -1,4 +1,5 @@
 removed_sources:
   GnuPG-Interface-0.44.tar.gz: 2e80d9a99615054dfd3f3ca2610eae4355ac2281
-sources:
   GnuPG-Interface-0.46.tar.gz: 0d084507f2c09eca158c3948e35567d69fff768c
+sources:
+  GnuPG-Interface-0.50.tar.gz: 471c61d262552548df5980cbfc5ccbe6a4607aca
