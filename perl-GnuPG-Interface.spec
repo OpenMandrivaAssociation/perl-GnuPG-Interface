@@ -12,6 +12,7 @@ Url:		http://search.cpan.org/dist/%{upstream_name}
 Source0:	http://www.cpan.org/modules/by-module/GnuPG/%{upstream_name}-%{upstream_version}.tar.gz
 
 BuildRequires:	gnupg
+BuildRequires: perl(strictures)
 BuildRequires: perl(Moo)
 BuildRequires:	perl-devel
 BuildRequires:	perl(Any::Moose)
