@@ -2,7 +2,7 @@
 %define upstream_version 0.46
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version 0.46
-Release:	2
+Release:	3
 
 Summary:	GnuPG-Interface module for perl
 Group:		Development/Perl
