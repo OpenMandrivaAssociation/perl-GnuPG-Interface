@@ -10,6 +10,7 @@ License:	GPL
 Url:		https://search.cpan.org/dist/%{upstream_name}
 Source0:	http://www.cpan.org/modules/by-module/GnuPG/GnuPG-Interface-0.46.tar.gz
 
+BuildRequires:	make
 BuildRequires:	gnupg
 BuildRequires:	perl-devel
 BuildRequires:	perl(Any::Moose)
