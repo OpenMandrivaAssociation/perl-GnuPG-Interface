@@ -1,14 +1,14 @@
 %define upstream_name	 GnuPG-Interface
-%define upstream_version 0.46
+%define upstream_version 1.07
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version 0.46
-Release:	3
+Version:	%{upstream_version}
+Release:	1
 
 Summary:	GnuPG-Interface module for perl
 Group:		Development/Perl
 License:	GPL
-Url:		https://search.cpan.org/dist/%{upstream_name}
-Source0:	http://www.cpan.org/modules/by-module/GnuPG/GnuPG-Interface-0.46.tar.gz
+Url:		https://metacpan.org/dist/GnuPG-Interface
+Source0:	https://cpan.metacpan.org/authors/id/B/BP/BPS/GnuPG-Interface-1.07.tar.gz
 
 BuildRequires:	make
 BuildRequires:	gnupg
