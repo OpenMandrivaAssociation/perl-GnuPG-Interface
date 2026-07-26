@@ -1,8 +1,7 @@
 %define upstream_name	 GnuPG-Interface
-%define upstream_version 1.07
 Name:		perl-%{upstream_name}
-Version:	%{upstream_version}
-Release:	1
+Version:	1.07
+Release:	2
 
 Summary:	GnuPG-Interface module for perl
 Group:		Development/Perl
@@ -31,7 +30,7 @@ to encrypting, signing, decryption, verification,
 and key-listing parsing.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
@@ -73,9 +72,7 @@ exit $e->exitstatus()'
 
 * Mon Aug 03 2009 JÃ©rÃ´me Quelin <jquelin@mandriva.org> 0.360.0-1mdv2010.0
 + Revision: 407753
-- rebuild using %%perl_convert_version
-
-* Thu Jul 31 2008 Thierry Vignaud <tv@mandriva.org> 0.36-4mdv2009.0
+- rebuild using %1.07 Thu Jul 31 2008 Thierry Vignaud <tv@mandriva.org> 0.36-4mdv2009.0
 + Revision: 257126
 - rebuild
 - kill re-definition of %%buildroot on Pixel's request
